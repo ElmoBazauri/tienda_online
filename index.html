@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Descubre regalos, juguetes, luces y productos especiales en LauliShop."
+    >
+
+    <title>LauliShop | Tu tienda favorita</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/products.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <div class="header-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">🛍️</span>
+                <span>Lauli<span class="logo-highlight">Shop</span></span>
+            </a>
+
+            <div class="header-actions">
+
+                <a href="#catalogo" class="header-link">
+                    Ver productos
+                </a>
+
+                <button
+                    class="cart-header-button"
+                    id="open-cart"
+                    type="button"
+                    aria-label="Abrir carrito de compras"
+                >
+                    🛒 Mi carrito
+
+                    <span id="cart-count" class="cart-count">
+                        0
+                    </span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    ✨ BIENVENIDO A LAULISHOP
+                </span>
+
+                <h1>
+                    ¡Encuentra eso que
+                    <span>te encanta!</span>
+                </h1>
+
+                <p>
+                    Regalos, juguetes, luces y productos especiales
+                    para sorprenderte y sorprender a quienes más quieres.
+                </p>
+
+                <a href="#catalogo" class="primary-button">
+                    Explorar productos →
+                </a>
+
+                <div class="hero-benefits">
+
+                    <span>🎁 Productos variados</span>
+                    <span>💖 Atención personalizada</span>
+                    <span>📲 Pedidos por WhatsApp</span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-decoration" aria-hidden="true">
+
+                <div class="decoration-card decoration-one">
+                    🎁
+                </div>
+
+                <div class="decoration-card decoration-two">
+                    🧸
+                </div>
+
+                <div class="decoration-card decoration-three">
+                    ✨
+                </div>
+
+                <div class="decoration-circle">
+                    💜
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO -->
+        <section class="catalog-section" id="catalogo">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        NUESTRO CATÁLOGO
+                    </span>
+
+                    <h2>Encuentra tus favoritos</h2>
+
+                    <p>
+                        Explora nuestras categorías y descubre algo especial.
+                    </p>
+                </div>
+
+                <div class="search-box">
+
+                    <label for="product-search" class="visually-hidden">
+                        Buscar productos
+                    </label>
+
+                    <span aria-hidden="true">🔎</span>
+
+                    <input
+                        type="search"
+                        id="product-search"
+                        placeholder="¿Qué estás buscando?"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORÍAS -->
+            <nav
+                class="categories"
+                id="categories"
+                aria-label="Categorías de productos"
+            >
+                <!-- JavaScript genera los botones -->
+            </nav>
+
+
+            <!-- INFORMACIÓN DEL CATÁLOGO -->
+            <div class="catalog-toolbar">
+
+                <p id="catalog-info" aria-live="polite">
+                    Cargando productos...
+                </p>
+
+                <button
+                    type="button"
+                    class="clear-search-button"
+                    id="clear-filters"
+                >
+                    Limpiar filtros
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCTOS -->
+            <div class="products-grid" id="products-grid">
+
+                <!-- JavaScript genera las tarjetas -->
+
+            </div>
+
+
+            <div class="empty-products hidden" id="empty-products">
+
+                <span>🔎</span>
+
+                <h3>No encontramos productos</h3>
+
+                <p>
+                    Prueba con otro nombre o selecciona otra categoría.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- BANNER INFORMATIVO -->
+        <section class="promo-banner">
+
+            <div class="promo-icon">
+                💝
+            </div>
+
+            <div>
+                <h2>¿Encontraste algo que te encanta?</h2>
+
+                <p>
+                    Agrégalo a tu carrito y prepara tu pedido.
+                    ¡Te atenderemos por WhatsApp!
+                </p>
+            </div>
+
+            <a href="#catalogo" class="promo-button">
+                Comprar ahora
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <a href="#" class="logo footer-logo">
+            🛍️ Lauli<span class="logo-highlight">Shop</span>
+        </a>
+
+        <p>
+            Productos especiales para momentos especiales. 💖
+        </p>
+
+        <p class="footer-copy">
+            © <span id="current-year"></span> LauliShop.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- FONDO OSCURO DEL CARRITO -->
+    <div
+        class="cart-overlay"
+        id="cart-overlay"
+        hidden
+    ></div>
+
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <aside
+        class="cart-panel"
+        id="cart-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cart-title"
+        aria-hidden="true"
+        inert
+    >
+
+        <div class="cart-header">
+
+            <div>
+                <span class="section-label">TU SELECCIÓN</span>
+
+                <h2 id="cart-title">Mi carrito 🛒</h2>
+            </div>
+
+            <button
+                class="close-cart-button"
+                id="close-cart"
+                type="button"
+                aria-label="Cerrar carrito"
+            >
+                ✕
+            </button>
+
+        </div>
+
+
+        <!-- CONTENIDO DEL CARRITO -->
+        <div
+            class="cart-items"
+            id="cart-items"
+            aria-live="polite"
+        >
+            <!-- JavaScript genera los productos -->
+        </div>
+
+
+        <!-- CARRITO VACÍO -->
+        <div class="empty-cart" id="empty-cart">
+
+            <span>🛒</span>
+
+            <h3>¡Tu carrito está vacío!</h3>
+
+            <p>
+                Agrega los productos que más te gusten.
+            </p>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="continue-shopping"
+            >
+                Seguir comprando
+            </button>
+
+        </div>
+
+
+        <!-- RESUMEN DEL PEDIDO -->
+        <div class="cart-summary" id="cart-summary">
+
+            <div class="cart-total-row">
+
+                <span>Subtotal</span>
+
+                <strong id="cart-subtotal">
+                    S/ 0.00
+                </strong>
+
+            </div>
+
+            <p class="shipping-note">
+                🚚 El costo de entrega se coordina por WhatsApp.
+            </p>
+
+            <button
+                type="button"
+                class="whatsapp-button"
+                id="checkout-button"
+            >
+                <span>📲</span>
+                Finalizar pedido por WhatsApp
+            </button>
+
+            <p class="checkout-note">
+                Revisarás y enviarás tu pedido desde WhatsApp.
+            </p>
+
+        </div>
+
+    </aside>
+
+
+</body>
+
+</html>
