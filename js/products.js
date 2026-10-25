@@ -21,22 +21,22 @@ const PRODUCTS = [
 
     {
         id: 1,
-        name: "Luces navideñas LED",
+        name: "Caja de Regalo Navideña",
         description: "Ilumina tus espacios con luces decorativas.",
         price: 15.00,
         category: "Luces navideñas",
-        image: "assets/images/luces-navidenas.jpg",
+        image: "assets/luces/navidad/lucesCajaRegalo.jpg",
         badge: "Popular",
         stock: 15
     },
 
     {
         id: 2,
-        name: "Luces de copos de nieve",
+        name: "Caja de Regalo Navideña",
         description: "Una decoración especial para Navidad.",
         price: 20.00,
         category: "Luces navideñas",
-        image: "assets/images/luces-copos.jpg",
+        image: "assets/luces/navidad/cajaRegaloNavidadconLed.png",
         badge: "Especial",
         stock: 5
     },
